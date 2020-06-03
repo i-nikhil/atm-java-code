@@ -188,7 +188,6 @@ public class Bank//controller part
     }
 	catch(java.util.InputMismatchException e)
 	{
-		System.out.println(e);
 		System.out.println("\n     !!WARNING!!\nPlease use correct input format");
 		System.out.println("\n<Session Expired at "+df.format(dateobj)+">\n");
 	}
