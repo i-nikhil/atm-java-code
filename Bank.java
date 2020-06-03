@@ -1,3 +1,5 @@
+//Download the code, compile & run it in command prompt for better ecperience.
+//ATM Simulation Software - Simple Project using JAVA (link in description)
 import java.io.*;
 import java.util.Date;
 import java.util.Scanner;
