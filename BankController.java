@@ -10,7 +10,6 @@ public class BankController
 
         ArrayList<User> table=new ArrayList<>();//storing user objects
         DateFormat df=new SimpleDateFormat("dd/MM/yy HH:mm:ss");//Date-time format
-        Date dateobj =new Date();//System date-time
         try
         {
             //use this dummy data for testing
@@ -73,7 +72,7 @@ public class BankController
                                    if(ur.getPin()==pin)
                                    {
                                        active=ur;//active user
-                                       System.out.println("\n<Successfully Logged in at "+df.format(dateobj)+">\n");
+                                       System.out.println("\n<Successfully Logged in at "+df.format(new Date())+">\n");
                                        System.out.println("\n **Welcome "+active.getName()+"**");
                                        found=2;
                                        break;
@@ -84,14 +83,14 @@ public class BankController
                            {
                                System.out.println("\n!!INVALID ACCOUNT NUMBER!!");
                                System.out.println("!!PLEASE TRY AGAIN LATER!!");
-                               System.out.println("\n<Session ended at "+df.format(dateobj)+">\n");
+                               System.out.println("\n<Session ended at "+df.format(new Date())+">\n");
                                System.exit(0);
                            }
                            if(found==1)
                            {
                                System.out.println("\n!!INVALID PIN!!");
                                System.out.println("!!PLEASE TRY AGAIN LATER!!");
-                               System.out.println("\n<Session ended at "+df.format(dateobj)+">\n");
+                               System.out.println("\n<Session ended at "+df.format(new Date())+">\n");
                                System.exit(0);
                            }
                            while (true)
@@ -152,7 +151,7 @@ public class BankController
                                           break;
 
                                    case 5:System.out.println("\nThanks for using SBI, visit again :)");
-                                          System.out.println("\n<Session ended at "+df.format(dateobj)+">\n");
+                                          System.out.println("\n<Session ended at "+df.format(new Date())+">\n");
                                           System.exit(0);
                                    default:System.out.println("\n!!WRONG CHOICE!!\nPress between 1 to 5");
                                }//end of inner switch
@@ -164,7 +163,7 @@ public class BankController
         catch (Exception e)
         {
             System.out.println("\n     !!WARNING!!\nPlease use correct input format");
-            System.out.println("\n<Session Expired at "+df.format(dateobj)+">\n");
+            System.out.println("\n<Session Expired at "+df.format(new Date())+">\n");
         }//end of catch block
     }//end of main
 }//end of class
